@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@import "./assets/scss/properties.scss";
+@include mat-core();
+$angular-theme-primary: mat-palette($base-primary);
+$angular-theme-accent: mat-palette($base-accent, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$angular-theme-warn: mat-palette($base-warn);
+$angular-custom-theme: mat-light-theme(
+  (
+    color: (
+      primary: $angular-theme-primary,
+      accent: $angular-theme-accent,
+      warn: $angular-theme-warn
+    )
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($angular-custom-theme);
+
+// You can add global styles to this file, and also import other style files.
+@import "./assets/scss/base.scss";
+
