@@ -1,0 +1,25 @@
+<section>
+	<h5  fxLayoutAlign="center center" class="card-header">Login</h5>
+	<div class="card-body" >
+    <div *ngIf="formError">{{ formError }}</div>
+    <div fxLayout="form-row" fxLayoutAlign="center center">
+                <div>
+                    <form (submit)="Submit()"  [formGroup]="loginForm" method="get" id="userId">
+                        <div>
+                        <br>
+                            <label>Email</label>
+                            <input matInput name="email" type="text" formControlName="email">
+                        <br>
+                            <label>Password</label>
+                            <input matInput name="password" type="text" formControlName="password">
+                        <br>
+                        <div fxLayout="row" fxLayoutAlign="center center" class="footer">
+                            <button mat-button color="warn" class="btn-form" id="sendMessage" (click)="onReset()">Reset</button>
+                            <button mat-button color="primary" class="btn-form" id="sendMessage" type="submit">Login</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+           </div>
+        </div>
+</section>

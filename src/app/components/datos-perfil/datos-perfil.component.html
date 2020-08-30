@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h3>Mi perfil</h3>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card>
+        <mat-card-header>
+        <mat-card-title> nombre: {{ user.first_name}} </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img src="{{ user.avatar }}" >
+            <mat-card-subtitle> Username: {{ user.last_name }} </mat-card-subtitle>
+            <mat-card-subtitle> Email: {{ user.email }}</mat-card-subtitle>
+        </mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <a routerLink="/editar"><span class="material-icons">
+                    edit
+                </span></a>
+            <a routerLink="/perfil/delete"><span class="material-icons">
+                    delete
+                </span></a>
+        </div>
+    </mat-card>
+</div>

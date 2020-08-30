@@ -1,0 +1,54 @@
+<div *ngIf="formError">{{ formError }}</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <form (submit)="confirmaractualizacion()" [formGroup]="userForm" class="" method="get" id="userId">
+        <div>
+    <mat-form-field appearance="fill">
+        <div>
+    <mat-label>Nombre</mat-label>
+</div>
+    <input matInput name="first_name" type="text" formControlName="first_name">
+</mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="legacy">
+    <div>
+    <mat-label>Username</mat-label>
+</div>
+    <input matInput name="last_name" type="text" formControlName="last_name">
+</mat-form-field>
+</div>
+<mat-form-field appearance="legacy">
+    <div>
+    <mat-label>Email</mat-label>
+</div>
+    <input matInput name="email" type="text" formControlName="email">
+</mat-form-field>
+<div>
+<mat-form-field appearance="legacy">
+<div>
+    <mat-label>Password</mat-label>
+    <input matInput name="password" type="text" formControlName="password">
+</div>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="legacy">
+<div>
+    <mat-label>Confirm Password</mat-label>
+</div>
+    <input matInput name="confirm_password" type="text" formControlName="confirm_password">
+</mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="legacy">
+<div>
+    <mat-label>Avatar</mat-label>
+</div>
+    <input matInput name="avatar" type="text" formControlName="avatar">
+</mat-form-field>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center" class="footer">
+    <button mat-button color="primary" class="btn-form" id="sendMessage" type="submit">Update
+        User</button>
+</div>
+</form>
